@@ -1,0 +1,18 @@
+#####################################################################
+# Copyright (c) 2023-2024 Qualcomm Technologies, Inc.
+# All Rights Reserved.
+# Confidential and Proprietary - Qualcomm Technologies, Inc.
+#####################################################################
+
+on boot && property:ro.boot.product.vendor.sku=sun
+    enable vendor.qti.hardware.spu.service
+
+on boot && property:ro.vendor.board.family=f-canoe && property:ro.vendor.qti.soc_name=canoe
+    enable vendor.qti.hardware.spu.service
+
+service vendor.qti.hardware.spu.service /system/bin/hw/vendor.qti.hardware.spu-service
+    class hal
+    user system
+    group system
+    shutdown critical
+    seclabel u:r:recovery:s0

@@ -1,0 +1,10 @@
+# Copyright (c) 2021, 2023 Qualcomm Technologies, Inc.
+# All Rights Reserved.
+# Confidential and Proprietary - Qualcomm Technologies, Inc.
+
+service vendor.keymint-spu-qti /system/bin/hw/android.hardware.security.keymint-service-spu-qti
+    class early_hal
+    user system
+    group system drmrpc
+    shutdown critical
+    seclabel u:r:recovery:s0

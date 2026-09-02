@@ -1,0 +1,165 @@
+# Android/TWRP build output
+out/
+*.log
+*.img
+*.zip
+
+# Local editor/OS files
+.DS_Store
+Thumbs.db
+*.swp
+*~
+# Repo tool metadata when this tree is tested inside a source checkout
+.repo/
+# -------------------------------------------------------------------------
+# Public TB323FU TWRP repository safeguards
+# Locally extracted proprietary/vendor material must never be committed.
+proprietary/
+vendor-blobs/
+local-blobs/
+blob-staging/
+*.proprietary
+# Stock firmware / partition dumps / recovery artifacts
+*.elf
+*.mbn
+*.melf
+*.bin.extracted
+*.img.*
+*.raw
+*.dump
+*.win
+*.win???
+*.sha2
+# Build/review/private working artifacts
+publication-work/
+private/
+*.before-*
+*.bak
+*.orig
+*.rej
+*.patch.tmp
+# Credentials / local environment
+.env
+.env.*
+*.pem
+*.key
+id_rsa
+id_ed25519
+
+# BEGIN TB323FU GENERATED PROPRIETARY PATHS
+# Staged locally from an external cache; never commit.
+/recovery/root/system/bin/hlosminkdaemon
+/recovery/root/system/bin/hw/android.hardware.boot-service.qti
+/recovery/root/system/bin/hw/android.hardware.gatekeeper-rust-service-qti
+/recovery/root/system/bin/hw/android.hardware.gatekeeper-service-spu-qti
+/recovery/root/system/bin/hw/android.hardware.health-service.qti
+/recovery/root/system/bin/hw/android.hardware.security.keymint-service-spu-qti
+/recovery/root/system/bin/hw/android.hardware.security.onekeymint-service-qti
+/recovery/root/system/bin/hw/android.hardware.security.secretkeeper-service-qti
+/recovery/root/system/bin/hw/android.hardware.weaver-service-spu-qti
+/recovery/root/system/bin/hw/vendor.qti.hardware.spu-service
+/recovery/root/system/bin/hw/vendor.qti.hardware.vibrator.service
+/recovery/root/system/bin/qseecomd
+/recovery/root/system/bin/sec_nvm
+/recovery/root/system/bin/spdaemon
+/recovery/root/system/lib64/android.hardware.common-V2-ndk.so
+/recovery/root/system/lib64/android.hardware.common.fmq-V1-ndk.so
+/recovery/root/system/lib64/android.hardware.security.sharedsecret-V2-ndk.so
+/recovery/root/system/lib64/android.hardware.vibrator-V2-ndk.so
+/recovery/root/system/lib64/hw/libqtigatekeeper.so
+/recovery/root/system/lib64/hw/libspuqtigatekeeper.so
+/recovery/root/system/lib64/libGPreqcancel.so
+/recovery/root/system/lib64/libGPreqcancel_svc.so
+/recovery/root/system/lib64/libQSEEComAPI.so
+/recovery/root/system/lib64/libaacvibrator.so
+/recovery/root/system/lib64/libboot_control_qti.so
+/recovery/root/system/lib64/libconfigdb.so
+/recovery/root/system/lib64/libdiag.so
+/recovery/root/system/lib64/libdmabufheap.so
+/recovery/root/system/lib64/libdrm.so
+/recovery/root/system/lib64/libdrmfs.so
+/recovery/root/system/lib64/libdrmtime.so
+/recovery/root/system/lib64/libdsi_netctrl.so
+/recovery/root/system/lib64/libdsutils.so
+/recovery/root/system/lib64/libexpat.so
+/recovery/root/system/lib64/libfmq.so
+/recovery/root/system/lib64/libgpt.so
+/recovery/root/system/lib64/libidl.so
+/recovery/root/system/lib64/libion.so
+/recovery/root/system/lib64/libkeymasterdeviceutils.so
+/recovery/root/system/lib64/libkeymasterutils.so
+/recovery/root/system/lib64/liblenovokeymint_qti.so
+/recovery/root/system/lib64/libmdmdetect.so
+/recovery/root/system/lib64/libminkdescriptor.so
+/recovery/root/system/lib64/libminksocket_vendor.so
+/recovery/root/system/lib64/libnetutils.so
+/recovery/root/system/lib64/libnicm.so
+/recovery/root/system/lib64/libnicm_dsi.so
+/recovery/root/system/lib64/libnicm_utils.so
+/recovery/root/system/lib64/libops.so
+/recovery/root/system/lib64/libpalclient.so
+/recovery/root/system/lib64/libprotobuf-cpp-lite-21.12.so
+/recovery/root/system/lib64/libqcbor.so
+/recovery/root/system/lib64/libqdi.so
+/recovery/root/system/lib64/libqisl.so
+/recovery/root/system/lib64/libqmi.so
+/recovery/root/system/lib64/libqmi_cci.so
+/recovery/root/system/lib64/libqmi_client_helper.so
+/recovery/root/system/lib64/libqmi_client_qmux.so
+/recovery/root/system/lib64/libqmi_common_so.so
+/recovery/root/system/lib64/libqmi_csi.so
+/recovery/root/system/lib64/libqmi_encdec.so
+/recovery/root/system/lib64/libqmiservices.so
+/recovery/root/system/lib64/libqrtr.so
+/recovery/root/system/lib64/libqti-utils.so
+/recovery/root/system/lib64/libqtivibratoreffect.so
+/recovery/root/system/lib64/libqtivibratoreffectoffload.so
+/recovery/root/system/lib64/librecovery_updater.so
+/recovery/root/system/lib64/librpmb.so
+/recovery/root/system/lib64/libseclog.so
+/recovery/root/system/lib64/libsoc_helper.so
+/recovery/root/system/lib64/libspcom.so
+/recovery/root/system/lib64/libspl.so
+/recovery/root/system/lib64/libspukeymint.so
+/recovery/root/system/lib64/libspukeymintdeviceutils.so
+/recovery/root/system/lib64/libspukeymintprovision.so
+/recovery/root/system/lib64/libspukeymintutils.so
+/recovery/root/system/lib64/libspuprovisionids.so
+/recovery/root/system/lib64/libspuqtigatekeeper.so
+/recovery/root/system/lib64/libssd.so
+/recovery/root/system/lib64/libtaautoload.so
+/recovery/root/system/lib64/libtime_genoff.so
+/recovery/root/system/lib64/libvmmem.so
+/recovery/root/system/lib64/libxml.so
+/recovery/root/system/lib64/vendor.aac.hardware.richtap.vibrator-V1-ndk_platform.so
+/recovery/root/system/lib64/vendor.qti.hardware.display.config-V7-ndk.so
+/recovery/root/system/lib64/vendor.qti.hardware.pal-V1-ndk.so
+/recovery/root/system/lib64/vendor.qti.hardware.spu-V2-ndk.so
+/recovery/root/system/lib64/vendor.qti.hardware.vibrator.impl.so
+/recovery/root/system/lib64/vendor.qti.hardware.vibratorCL.impl.so
+/recovery/root/system/lib64/vendor.qti.hardware.vibratorOL.impl.so
+/recovery/root/system/lib64/vendor.qti.hardware.vibratorSel.impl.so
+/recovery/root/vendor/firmware/haptic_ram.bin
+/recovery/root/vendor/firmware/haptic_rtp.bin
+/recovery/root/vendor/firmware/haptic_rtp_dual_test.bin
+/recovery/root/vendor/firmware/haptic_rtp_lighthouse.bin
+/recovery/root/vendor/firmware/haptic_rtp_osc_24K_5s.bin
+/recovery/root/vendor/firmware/haptic_rtp_silk.bin
+/recovery/root/vendor/firmware/novatek_ts_csot_3k_fw.bin
+/recovery/root/vendor/firmware/novatek_ts_csot_3k_mp.bin
+/recovery/root/vendor/firmware/novatek_ts_csot_fw.bin
+/recovery/root/vendor/firmware/novatek_ts_csot_mp.bin
+/recovery/root/vendor/firmware/novatek_ts_fw.bin
+/recovery/root/vendor/firmware/novatek_ts_mp.bin
+# END TB323FU GENERATED PROPRIETARY PATHS
+
+# BEGIN TB323FU EXTERNAL PREBUILT TOOLS
+# Opaque prebuilt shell tools are staged locally; never commit them.
+/prebuilts/zsh_bin/curl
+/prebuilts/zsh_bin/fastfetch
+/prebuilts/zsh_bin/git
+/prebuilts/zsh_bin/wget
+/prebuilts/zsh_bin/zsh
+/prebuilts/zsh_bin/zstd
+# END TB323FU EXTERNAL PREBUILT TOOLS
+/recovery/root/vendor/firmware/haptic_rtp_auto_sin.bin

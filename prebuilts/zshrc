@@ -1,0 +1,23 @@
+# TB323FU TWRP recovery shell configuration
+
+export TERM="${TERM:-xterm-256color}"
+export PATH="/sbin:/system/bin:/system/xbin:${PATH}"
+
+# Optional convenience banner when fastfetch is available.
+if command -v fastfetch >/dev/null 2>&1; then
+    fastfetch --logo android
+fi
+
+autoload -U colors 2>/dev/null && colors
+
+PROMPT='%n@%m %~ %# '
+
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias c='clear'
+alias q='exit'
+
+setopt AUTO_CD
+setopt EXTENDED_HISTORY
+setopt SHARE_HISTORY

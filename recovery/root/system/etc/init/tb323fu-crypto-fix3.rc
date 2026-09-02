@@ -1,0 +1,4 @@
+# TB323FU Android 16 TWRP crypto-fix3
+on early-init
+    setprop keymaster_ver 4.x
+    setprop ro.crypto.dm_default_key.options_format.version 2

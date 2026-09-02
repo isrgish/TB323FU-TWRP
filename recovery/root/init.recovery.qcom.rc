@@ -1,0 +1,120 @@
+# Copyright (c) 2017-2018,2020-2021 The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above copyright
+#       notice, this list of conditions and the following disclaimer in the
+#       documentation and/or other materials provided with the distribution.
+#     * Neither the name of The Linux Foundation nor
+#       the names of its contributors may be used to endorse or promote
+#       products derived from this software without specific prior written
+#       permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+# AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+# IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+# NON-INFRINGEMENT ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+# CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+# EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+# PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+# OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+# OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+# ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+
+on early-fs
+    write /proc/sys/walt/sched_lib_name "recovery,Updater,updater,update_engine_sideload"
+    write /proc/sys/walt/sched_lib_mask_force 255
+
+service post-boot-script /system/bin/sh -c /system/bin/init.kernel.post_boot-sun_default_6_2.sh
+    user root
+    group root
+    oneshot
+    seclabel u:r:recovery:s0
+
+on init
+    setprop sys.usb.configfs 1
+    setprop prepdecrypt.setpatch true
+
+on property:ro.boot.usbcontroller=*
+    setprop sys.usb.controller ${ro.boot.usbcontroller}
+    wait /sys/bus/platform/devices/${ro.boot.usb.dwc3_msm:-a600000.ssusb}/mode
+    write /sys/bus/platform/devices/${ro.boot.usb.dwc3_msm:-a600000.ssusb}/mode peripheral
+    wait /sys/class/udc/${ro.boot.usbcontroller} 1
+
+on fs
+    wait /dev/block/platform/soc/${ro.boot.bootdevice}
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+    write /proc/sys/kernel/firmware_config/force_sysfs_fallback 1
+
+on property:twrp.modules.loaded=true
+    # Mount firmware
+    mkdir /firmware
+    mount vfat /dev/block/bootdevice/by-name/modem${ro.boot.slot_suffix} /firmware ro
+    symlink /firmware /vendor/firmware_mnt
+
+    wait /firmware/image/adsp.mdt
+    # Load ADSP firmware for PMIC
+    wait /sys/kernel/boot_adsp/ssr
+    write /sys/kernel/boot_adsp/ssr 1
+
+    # sec_nvm requires persist partition.
+    mkdir /persist 0771 system system
+    mount ext4 /dev/block/bootdevice/by-name/persist /persist
+    mkdir /mnt/vendor/persist 0660 system system
+    mount ext4 /persist /mnt/vendor/persist bind
+
+    mkdir /persist/secnvm 0770 system system
+    mkdir /persist/spudc 0770 system system
+    mkdir /mnt/vendor/spunvm 0660 system system
+
+    mkdir /persist/iar_db 0770 system system
+
+    mount vfat /dev/block/bootdevice/by-name/spunvm /mnt/vendor/spunvm
+
+    start vendor.qti.vibrator
+
+    # Restore SELinux labels for vendor binaries so that init can
+    # perform the correct domain transition when starting services.
+    # Without this, binaries under /vendor/bin get labeled as
+    # u:object_r:rootfs:s0 and init refuses to start them.
+    restorecon --recursive /vendor/bin
+    restorecon --recursive /vendor/lib64
+    restorecon --recursive /vendor/etc
+
+    start vendor.qseecomd
+    start vendor.secretkeeper
+    start vendor.keymint
+    start vendor.keymint-spu-qti
+    start vendor.minkdaemon
+    start vendor.health-default
+    start vendor.boot-qti
+    start vendor.gatekeeper_default
+    start vendor.gatekeeper_spu
+    start vendor.spdaemon
+    start vendor.sec_nvm
+    start vendor.spu_weaver
+    wait /sys/class/power_supply/battery
+
+    setprop twrp.module.handler_done true
+
+    # umount /firmware
+
+on property:ro.crypto.state=encrypted && property:ro.boot.dynamic_partitions=true
+    start prepdecrypt.vendor
+
+on property:sys.powerctl=*
+    write /sys/class/leds/vibrator_l/activate 0
+    write /sys/class/leds/vibrator_l/state 0
+    write /sys/class/leds/vibrator_l/duration 0
+    write /sys/class/leds/vibrator_r/activate 0
+    write /sys/class/leds/vibrator_r/state 0
+    write /sys/class/leds/vibrator_r/duration 0
+    stop vendor.qti.vibrator
+
+on property:vendor.sys.listeners.registered=true
+    setprop sys.boot_completed 1
+    start vendor.ssgtzd
