@@ -155,11 +155,5 @@ id_ed25519
 
 # BEGIN TB323FU EXTERNAL PREBUILT TOOLS
 # Opaque prebuilt shell tools are staged locally; never commit them.
-/prebuilts/zsh_bin/curl
-/prebuilts/zsh_bin/fastfetch
-/prebuilts/zsh_bin/git
-/prebuilts/zsh_bin/wget
-/prebuilts/zsh_bin/zsh
-/prebuilts/zsh_bin/zstd
 # END TB323FU EXTERNAL PREBUILT TOOLS
 /recovery/root/vendor/firmware/haptic_rtp_auto_sin.bin

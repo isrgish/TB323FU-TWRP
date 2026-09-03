@@ -71,5 +71,4 @@ source provenance.
 ## Licensing and third-party material
 
 This is a mixed-origin project. See [`docs/LICENSING.md`](docs/LICENSING.md)
-and [`NOTICE`](NOTICE). Proprietary Lenovo/Qualcomm files and opaque prebuilt
-shell-tool executables are intentionally excluded from Git history.
+and [`NOTICE`](NOTICE). Proprietary Lenovo/Qualcomm files are intentionally excluded from Git history. The six validated recovery shell tools are intentionally included as third-party prebuilts; see [`docs/THIRD_PARTY_TOOLS.md`](docs/THIRD_PARTY_TOOLS.md).

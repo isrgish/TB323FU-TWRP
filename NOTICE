@@ -1,24 +1,21 @@
 TB323FU TWRP - third-party and provenance notice
 
-This is an unofficial community TWRP device-tree project for Lenovo TB323FU.
+Unofficial community TWRP device-tree project for Lenovo TB323FU.
 
-The project incorporates or is derived from work in multiple upstream
-projects, including:
+Derived from or incorporating work from TeamWin Recovery Project, TWRP-Test,
+polygraphene's TB322FC recovery work, and AOSP. Individual files retain their
+existing copyright/SPDX/license notices.
 
-- TeamWin Recovery Project (TWRP)
-- TWRP-Test Android 16 manifest work
-- polygraphene's TB322FC recovery work
-- Android Open Source Project (AOSP)
+Lenovo/Qualcomm proprietary binaries and firmware are not distributed in this
+Git repository.
 
-Individual source files retain their existing copyright, SPDX, and license
-notices where present.
+Six third-party shell utilities are distributed as binary prebuilts: curl,
+fastfetch, git, wget, zsh and zstd. Their versions, hashes, notices and source
+provenance are documented in docs/THIRD_PARTY_TOOLS.md and
+LICENSES/third-party-tools/.
 
-Lenovo and Qualcomm proprietary binaries/firmware are not distributed in this
-Git repository. The project does not grant rights to those components.
+Accompanying source/provenance bundle: TB323FU-TWRP-third-party-corresponding-source-fix3b.tar.xz
+SHA-256: 49eaaf833512753260320cdc0c7263a3de16fb0ac3a9159a0815146307f6b79d
 
-Opaque third-party prebuilt shell-tool executables used during the validated
-private development build are also excluded from Git history.
-
-Lenovo, Qualcomm, Google, Android, TeamWin, and other names or marks belong to
-their respective owners. This project is not an official release of, or
-endorsed by, those parties.
+Lenovo, Qualcomm, Google, Android, TeamWin and other marks belong to their
+respective owners. This is not an official or endorsed release.

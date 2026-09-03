@@ -1,0 +1,87 @@
+owner_tool	package	declared_license	source_bundle_file	notice_file
+curl	curl	curl	sources/curl--curl--curl-8.18.0.tar.bz2	curl/curl/01-COPYING
+curl	libnghttp2	MIT	sources/curl--libnghttp2--nghttp2-1.68.0.tar.gz	curl/libnghttp2/01-LICENSE.rubydomain
+curl	libnghttp2	MIT	sources/curl--libnghttp2--nghttp2-1.68.0.tar.gz	curl/libnghttp2/02-COPYING
+curl	libnghttp2	MIT	sources/curl--libnghttp2--nghttp2-1.68.0.tar.gz	curl/libnghttp2/03-LICENSE
+curl	libnghttp2	MIT	sources/curl--libnghttp2--nghttp2-1.68.0.tar.gz	curl/libnghttp2/04-LICENSE
+curl	libnghttp2	MIT	sources/curl--libnghttp2--nghttp2-1.68.0.tar.gz	curl/libnghttp2/05-COPYING
+curl	libcares	MIT	sources/curl--libcares--c-ares-1.34.6.tar.gz	curl/libcares/01-LICENSE.md
+curl	libzstd	BSD-3-Clause	sources/curl--libzstd--v1.5.7.tar.gz	curl/libzstd/01-COPYING
+curl	libzstd	BSD-3-Clause	sources/curl--libzstd--v1.5.7.tar.gz	curl/libzstd/02-LICENSE
+curl	zlib	Zlib	sources/curl--zlib--zlib-1.3.2.tar.xz	curl/zlib/01-LICENSE
+curl	zlib	Zlib	sources/curl--zlib--zlib-1.3.2.tar.xz	curl/zlib/02-LICENSE_1_0.txt
+curl	zlib	Zlib	sources/curl--zlib--zlib-1.3.2.tar.xz	curl/zlib/03-LICENSE.Info-Zip
+curl	libbrotli	MIT	sources/curl--libbrotli--v1.2.0.tar.gz	curl/libbrotli/01-LICENSE
+git	git	GPL-2.0-only	sources/git--git--git-2.50.1.tar.xz	git/git/01-COPYING
+git	git	GPL-2.0-only	sources/git--git--git-2.50.1.tar.xz	git/git/02-License.txt
+git	git	GPL-2.0-only	sources/git--git--git-2.50.1.tar.xz	git/git/03-LICENSE
+git	git	GPL-2.0-only	sources/git--git--git-2.50.1.tar.xz	git/git/04-COPYING
+git	git	GPL-2.0-only	sources/git--git--git-2.50.1.tar.xz	git/git/05-LICENSE
+git	git	GPL-2.0-only	sources/git--git--git-2.50.1.tar.xz	git/git/06-LICENSE.txt
+git	git	GPL-2.0-only	sources/git--git--git-2.50.1.tar.xz	git/git/07-COPYING
+git	libpcre2	BSD-3-Clause	sources/git--libpcre2--pcre2-10.43.tar.bz2	git/libpcre2/01-LICENCE
+git	libpcre2	BSD-3-Clause	sources/git--libpcre2--pcre2-10.43.tar.bz2	git/libpcre2/02-COPYING-CMAKE-SCRIPTS
+git	libpcre2	BSD-3-Clause	sources/git--libpcre2--pcre2-10.43.tar.bz2	git/libpcre2/03-COPYING
+git	libiconv	GPL-3.0-or-later LGPL-2.0-or-later	sources/git--libiconv--libiconv-1.19.tar.gz	git/libiconv/01-COPYING.LIB
+git	libiconv	GPL-3.0-or-later LGPL-2.0-or-later	sources/git--libiconv--libiconv-1.19.tar.gz	git/libiconv/02-COPYING.LIB
+git	libiconv	GPL-3.0-or-later LGPL-2.0-or-later	sources/git--libiconv--libiconv-1.19.tar.gz	git/libiconv/03-COPYING
+git	libexpat	MIT	sources/git--libexpat--expat-2.8.1.tar.xz	git/libexpat/01-COPYING
+git	libcurl	curl	sources/git--libcurl--curl-8.18.0.tar.bz2	git/libcurl/01-COPYING
+git	libz	Zlib	sources/git--libz--zlib-1.3.2.tar.gz	git/libz/01-LICENSE
+git	libz	Zlib	sources/git--libz--zlib-1.3.2.tar.gz	git/libz/02-LICENSE_1_0.txt
+git	libz	Zlib	sources/git--libz--zlib-1.3.2.tar.gz	git/libz/03-LICENSE.Info-Zip
+git	libnghttp2	MIT	sources/git--libnghttp2--nghttp2-1.68.0.tar.gz	git/libnghttp2/01-LICENSE.rubydomain
+git	libnghttp2	MIT	sources/git--libnghttp2--nghttp2-1.68.0.tar.gz	git/libnghttp2/02-COPYING
+git	libnghttp2	MIT	sources/git--libnghttp2--nghttp2-1.68.0.tar.gz	git/libnghttp2/03-LICENSE
+git	libnghttp2	MIT	sources/git--libnghttp2--nghttp2-1.68.0.tar.gz	git/libnghttp2/04-LICENSE
+git	libnghttp2	MIT	sources/git--libnghttp2--nghttp2-1.68.0.tar.gz	git/libnghttp2/05-COPYING
+git	libcares	MIT	sources/git--libcares--c-ares-1.34.6.tar.gz	git/libcares/01-LICENSE.md
+git	libzstd	BSD-3-Clause	sources/git--libzstd--v1.5.7.tar.gz	git/libzstd/01-COPYING
+git	libzstd	BSD-3-Clause	sources/git--libzstd--v1.5.7.tar.gz	git/libzstd/02-LICENSE
+git	libbrotli	MIT	sources/git--libbrotli--v1.2.0.tar.gz	git/libbrotli/01-LICENSE
+git	libopenssl	Apache-2.0	sources/git--libopenssl--openssl-3.6.2.tar.gz	git/libopenssl/01-LICENSE.txt
+git	libopenssl	Apache-2.0	sources/git--libopenssl--openssl-3.6.2.tar.gz	git/libopenssl/02-LICENSE
+git	libopenssl	Apache-2.0	sources/git--libopenssl--openssl-3.6.2.tar.gz	git/libopenssl/03-copyright.pm
+wget	wget	GPL-3.0-or-later	sources/wget--wget--wget-1.25.0.tar.gz	wget/wget/01-COPYING
+wget	libopenssl	Apache-2.0	sources/wget--libopenssl--openssl-3.6.2.tar.gz	wget/libopenssl/01-LICENSE.txt
+wget	libopenssl	Apache-2.0	sources/wget--libopenssl--openssl-3.6.2.tar.gz	wget/libopenssl/02-LICENSE
+wget	libopenssl	Apache-2.0	sources/wget--libopenssl--openssl-3.6.2.tar.gz	wget/libopenssl/03-copyright.pm
+wget	libcares	MIT	sources/wget--libcares--c-ares-1.34.6.tar.gz	wget/libcares/01-LICENSE.md
+wget	libidn2	GPL-2.0-or-later LGPL-3.0-or-later	sources/wget--libidn2--libidn2-2.3.7.tar.gz	wget/libidn2/01-COPYING
+wget	libidn2	GPL-2.0-or-later LGPL-3.0-or-later	sources/wget--libidn2--libidn2-2.3.7.tar.gz	wget/libidn2/02-COPYING.LESSERv3
+wget	libidn2	GPL-2.0-or-later LGPL-3.0-or-later	sources/wget--libidn2--libidn2-2.3.7.tar.gz	wget/libidn2/03-COPYING.unicode
+wget	libidn2	GPL-2.0-or-later LGPL-3.0-or-later	sources/wget--libidn2--libidn2-2.3.7.tar.gz	wget/libidn2/04-COPYINGv2
+wget	libz	Zlib	sources/wget--libz--zlib-1.3.2.tar.gz	wget/libz/01-LICENSE
+wget	libz	Zlib	sources/wget--libz--zlib-1.3.2.tar.gz	wget/libz/02-LICENSE_1_0.txt
+wget	libz	Zlib	sources/wget--libz--zlib-1.3.2.tar.gz	wget/libz/03-LICENSE.Info-Zip
+wget	libunistring	GPL-2.0-only	sources/wget--libunistring--libunistring-1.3.tar.gz	wget/libunistring/01-COPYING.LIB
+wget	libunistring	GPL-2.0-only	sources/wget--libunistring--libunistring-1.3.tar.gz	wget/libunistring/02-COPYING
+wget	libiconv	GPL-3.0-or-later LGPL-2.0-or-later	sources/wget--libiconv--libiconv-1.19.tar.gz	wget/libiconv/01-COPYING.LIB
+wget	libiconv	GPL-3.0-or-later LGPL-2.0-or-later	sources/wget--libiconv--libiconv-1.19.tar.gz	wget/libiconv/02-COPYING.LIB
+wget	libiconv	GPL-3.0-or-later LGPL-2.0-or-later	sources/wget--libiconv--libiconv-1.19.tar.gz	wget/libiconv/03-COPYING
+zsh	zsh	MIT-Modern-Variant	sources/zsh--zsh--zsh-5.9.tar.xz	zsh/zsh/01-LICENCE
+zsh	libncurses	MIT	sources/zsh--libncurses--ncurses-6.5.tar.gz	zsh/libncurses/01-COPYING
+zsh	libncurses	MIT	sources/zsh--libncurses--ncurses-6.5.tar.gz	zsh/libncurses/02-copyright
+zsh	libncurses	MIT	sources/zsh--libncurses--ncurses-6.5.tar.gz	zsh/libncurses/03-copyright
+zsh	libncurses	MIT	sources/zsh--libncurses--ncurses-6.5.tar.gz	zsh/libncurses/04-copyright
+zsh	libncurses	MIT	sources/zsh--libncurses--ncurses-6.5.tar.gz	zsh/libncurses/05-copyright
+zsh	libncurses	MIT	sources/zsh--libncurses--ncurses-6.5.tar.gz	zsh/libncurses/06-copyright
+zsh	libncurses	MIT	sources/zsh--libncurses--ncurses-6.5.tar.gz	zsh/libncurses/07-copyright
+zsh	libncurses	MIT	sources/zsh--libncurses--ncurses-6.5.tar.gz	zsh/libncurses/08-copyright
+zsh	libpcre	BSD-3-Clause	sources/zsh--libpcre--pcre-8.45.tar.bz2	zsh/libpcre/01-LICENCE
+zsh	libpcre	BSD-3-Clause	sources/zsh--libpcre--pcre-8.45.tar.bz2	zsh/libpcre/02-COPYING-CMAKE-SCRIPTS
+zsh	libpcre	BSD-3-Clause	sources/zsh--libpcre--pcre-8.45.tar.bz2	zsh/libpcre/03-COPYING
+zstd	zstd	BSD-3-Clause	sources/zstd--zstd--v1.5.6.tar.gz	zstd/zstd/01-COPYING
+zstd	zstd	BSD-3-Clause	sources/zstd--zstd--v1.5.6.tar.gz	zstd/zstd/02-LICENSE
+zstd	libz	Zlib	sources/zstd--libz--zlib-1.3.1.tar.gz	zstd/libz/01-LICENSE
+zstd	libz	Zlib	sources/zstd--libz--zlib-1.3.1.tar.gz	zstd/libz/02-LICENSE_1_0.txt
+zstd	liblzma	LGPL-2.1-or-later	sources/zstd--liblzma--xz-5.6.3.tar.gz	zstd/liblzma/01-COPYING
+zstd	liblzma	LGPL-2.1-or-later	sources/zstd--liblzma--xz-5.6.3.tar.gz	zstd/liblzma/02-COPYING.0BSD
+zstd	liblzma	LGPL-2.1-or-later	sources/zstd--liblzma--xz-5.6.3.tar.gz	zstd/liblzma/03-COPYING.GPLv2
+zstd	liblzma	LGPL-2.1-or-later	sources/zstd--liblzma--xz-5.6.3.tar.gz	zstd/liblzma/04-COPYING.GPLv3
+zstd	liblzma	LGPL-2.1-or-later	sources/zstd--liblzma--xz-5.6.3.tar.gz	zstd/liblzma/05-COPYING.LGPLv2.1
+curl+wget	libopenssl	Apache-2.0	sources/curl+wget--libopenssl--openssl-3.4.0.tar.gz	curl+wget/libopenssl/01-LICENSE.txt
+curl+wget	libopenssl	Apache-2.0	sources/curl+wget--libopenssl--openssl-3.4.0.tar.gz	curl+wget/libopenssl/02-LICENSE
+curl+wget	libopenssl	Apache-2.0	sources/curl+wget--libopenssl--openssl-3.4.0.tar.gz	curl+wget/libopenssl/03-copyright.pm
+fastfetch	fastfetch	MIT	sources/fastfetch--fastfetch--git-636471c3669201b37fca587e2882eaf3c7062aeb.tar.gz	fastfetch/fastfetch/01-LICENSE
+fastfetch	fastfetch	MIT	sources/fastfetch--fastfetch--git-636471c3669201b37fca587e2882eaf3c7062aeb.tar.gz	fastfetch/fastfetch/02-copyright

@@ -1,58 +1,33 @@
 # Licensing and third-party material
 
-This repository is a **mixed-origin device tree**. Do not assume that one
-blanket license applies to every file.
+This repository is a **mixed-origin device tree**. No blanket license applies
+to every file.
 
-## Files with explicit SPDX identifiers
-
-The core device-tree files that carry:
-
-`SPDX-License-Identifier: Apache-2.0`
-
-remain under the Apache License 2.0. A copy is provided at
-`LICENSES/Apache-2.0.txt`.
-
-Examples include the primary Android/TWRP make/build files such as
-`Android.bp`, `AndroidProducts.mk`, `BoardConfig.mk`, `device.mk`, and
-`twrp_TB323FU.mk`.
-
-## Files retaining their own notices
-
-Files with an embedded copyright or license notice retain that notice and its
-terms. For example, `prebuilts/avbtool` retains its upstream permissive license
-notice.
-
-## Patches
-
-Files under `patches/` are intended to modify upstream projects. They do not
-replace or override the license of the upstream source to which they apply.
-The applicable upstream source license must also be observed.
+Core files carrying `SPDX-License-Identifier: Apache-2.0` remain under
+Apache License 2.0; see `LICENSES/Apache-2.0.txt`. Files with their own
+notices retain those terms, and patches remain subject to their upstream
+project licenses.
 
 ## Proprietary Lenovo / Qualcomm files
 
 Lenovo/Qualcomm proprietary binaries, firmware, services, and libraries are
-**not included in Git history**.
+**not included in Git history**. `proprietary-files.tsv` records the exact
+private-development target paths/hashes used by the validated fix3b build.
+Builders must obtain required proprietary files from a source they are legally
+entitled to use.
 
-`proprietary-files.tsv` records the exact private-development target paths and
-hashes used by the validated fix3b build. Builders must obtain any required
-proprietary files from a source they are legally entitled to use.
+## Third-party recovery shell tools
 
-The repository does not grant a license to Lenovo, Qualcomm, or other
-third-party proprietary material.
+The six utilities in `prebuilt-tools.tsv` (curl, fastfetch, git, wget, zsh,
+zstd) are intentionally included as third-party binary prebuilts. Versions,
+hashes, source provenance and notices are documented in
+`docs/THIRD_PARTY_TOOLS.md` and `LICENSES/third-party-tools/`.
 
-## External prebuilt shell tools
+Accompanying source/provenance bundle: `TB323FU-TWRP-third-party-corresponding-source-fix3b.tar.xz`
 
-Opaque `zsh`, `git`, `curl`, `wget`, `zstd`, and `fastfetch` binaries used by
-the validated private development environment are not included in Git history.
-`prebuilt-tools.tsv` records the exact validated private-development hashes.
+SHA-256: `49eaaf833512753260320cdc0c7263a3de16fb0ac3a9159a0815146307f6b79d`
 
-Public-source/replacement handling for these optional recovery shell utilities
-is being documented separately.
+The normal TWRP build does not rebuild these utilities.
 
-## Files without an explicit license notice
-
-No default blanket license is asserted here for a file that lacks an explicit
-license or a clearly documented upstream origin. Such files remain subject to
-their actual provenance and applicable rights.
-
-This document is practical project documentation, not legal advice.
+No blanket license is asserted for files lacking an explicit license or clear
+upstream origin. This document is practical project documentation, not legal advice.
