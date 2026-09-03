@@ -88,7 +88,6 @@ id_ed25519
 /recovery/root/system/lib64/libion.so
 /recovery/root/system/lib64/libkeymasterdeviceutils.so
 /recovery/root/system/lib64/libkeymasterutils.so
-/recovery/root/system/lib64/liblenovokeymint_qti.so
 /recovery/root/system/lib64/libmdmdetect.so
 /recovery/root/system/lib64/libminkdescriptor.so
 /recovery/root/system/lib64/libminksocket_vendor.so

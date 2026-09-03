@@ -51,7 +51,13 @@ grep -q 'setprop ro.crypto.dm_default_key.options_format.version 2' \
     die "init dm-default-key v2 property missing"
 
 COUNT="$(awk -F '\t' 'NR>1 && $1!=""{c++} END{print c+0}' "$TREE/proprietary-files.tsv")"
-[ "$COUNT" -eq 104 ] || die "Expected 104 proprietary manifest targets, found $COUNT"
+[ "$COUNT" -eq 103 ] || die "Expected 103 proprietary manifest targets, found $COUNT"
+# Retired stale pre-SPU payload. The validated fix3b crypto path uses the
+# stock TB323FU SPU KeyMint/Gatekeeper stack instead. Keep this path absent;
+# see docs/DECRYPTION_TROUBLESHOOTING.md.
+RETIRED_LENOVO_KEYMINT="recovery/root/system/lib64/liblenovokeymint_qti.so"
+[ ! -e "$TREE/$RETIRED_LENOVO_KEYMINT" ] ||
+    die "Retired stale Lenovo KeyMint library must not be staged: $RETIRED_LENOVO_KEYMINT"
 
 if grep -RInE \
   'git[[:space:]]+config[[:space:]]+--global[[:space:]]+user\.(name|email)' \

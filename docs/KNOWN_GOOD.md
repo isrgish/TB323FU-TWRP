@@ -56,3 +56,9 @@ Validated on the working fix3b image:
 
 A new full compile is not required merely for publication cleanup; any future
 functional source changes still require appropriate build/runtime validation.
+
+## Decryption troubleshooting
+
+For the fix3b SPU KeyMint/Gatekeeper history, including the retirement of the
+stale inherited `liblenovokeymint_qti.so`, see
+[`DECRYPTION_TROUBLESHOOTING.md`](DECRYPTION_TROUBLESHOOTING.md).
