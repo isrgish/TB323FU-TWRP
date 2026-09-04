@@ -72,3 +72,26 @@ source provenance.
 
 This is a mixed-origin project. See [`docs/LICENSING.md`](docs/LICENSING.md)
 and [`NOTICE`](NOTICE). Proprietary Lenovo/Qualcomm files are intentionally excluded from Git history. The six validated recovery shell tools are intentionally included as third-party prebuilts; see [`docs/THIRD_PARTY_TOOLS.md`](docs/THIRD_PARTY_TOOLS.md).
+
+<!-- TB323FU_PUBLICATION_DOCS_BEGIN -->
+## Public build and documentation
+
+This repository targets the **Lenovo TB323FU**. References to **TB322FC**
+identify the upstream donor/base source only.
+
+Start with the [documentation index](docs/INDEX.md). Key references include:
+
+- [known-good fix3b baseline](docs/KNOWN_GOOD.md);
+- [canonical build workflow](docs/BUILDING.md);
+- [proprietary-file acquisition](docs/PROPRIETARY_FILES.md);
+- [third-party recovery tools](docs/THIRD_PARTY_TOOLS.md);
+- [publication/testing status](docs/PUBLICATION_STATUS.md);
+- [decryption troubleshooting](docs/DECRYPTION_TROUBLESHOOTING.md).
+
+The repository intentionally does not track the proprietary recovery payload.
+The canonical acquisition script reconstructs the required 103-file payload
+from hash-pinned sources and verifies every file before use.
+
+The build workflow supports `--preflight-only` and never flashes a recovery
+partition. Preserve the stock recovery slot when validating a new image.
+<!-- TB323FU_PUBLICATION_DOCS_END -->
